@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/fabricio-cerci/clean-node-api#readme",
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.7",
     "@shelf/jest-mongodb": "^2.2.0",
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
