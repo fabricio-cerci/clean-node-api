@@ -1,7 +1,7 @@
 import {
   loginPath,
-  signUpPath,
   surveyPath,
+  signUpPath,
   surveyResultPath
 } from './paths/'
 

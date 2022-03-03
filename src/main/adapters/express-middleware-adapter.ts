@@ -1,7 +1,8 @@
 import { HttpRequest, Middleware } from '@/presentation/protocols'
-import { NextFunction, Request, RequestHandler, Response } from 'express'
 
-export const adaptMiddleware = (middleware: Middleware): RequestHandler => {
+import { Request, Response, NextFunction } from 'express'
+
+export const adaptMiddleware = (middleware: Middleware) => {
   return async (req: Request, res: Response, next: NextFunction) => {
     const httpRequest: HttpRequest = {
       headers: req.headers
