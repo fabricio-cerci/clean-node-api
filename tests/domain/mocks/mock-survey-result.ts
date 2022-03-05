@@ -1,9 +1,8 @@
+import { SaveSurveyResult } from '@/domain/usecases'
 import { SurveyResultModel } from '@/domain/models'
-import { SaveSurveyResultParams } from '@/domain/usecases'
-
 import faker from '@faker-js/faker'
 
-export const mockSaveSurveyResultParams = (): SaveSurveyResultParams => ({
+export const mockSaveSurveyResultParams = (): SaveSurveyResult.Params => ({
   accountId: faker.datatype.uuid(),
   surveyId: faker.datatype.uuid(),
   answer: faker.random.word(),
@@ -15,15 +14,15 @@ export const mockSurveyResultModel = (): SurveyResultModel => ({
   question: faker.random.words(),
   answers: [{
     answer: faker.random.word(),
-    count: faker.random.number({ min: 0, max: 1000 }),
-    percent: faker.random.number({ min: 0, max: 100 }),
-    isCurrentAccountAnswer: faker.random.boolean()
+    count: faker.datatype.number({ min: 0, max: 1000 }),
+    percent: faker.datatype.number({ min: 0, max: 100 }),
+    isCurrentAccountAnswer: faker.datatype.boolean()
   }, {
     answer: faker.random.word(),
     image: faker.image.imageUrl(),
-    count: faker.random.number({ min: 0, max: 1000 }),
-    percent: faker.random.number({ min: 0, max: 100 }),
-    isCurrentAccountAnswer: faker.random.boolean()
+    count: faker.datatype.number({ min: 0, max: 1000 }),
+    percent: faker.datatype.number({ min: 0, max: 100 }),
+    isCurrentAccountAnswer: faker.datatype.boolean()
   }],
   date: faker.date.recent()
 })
